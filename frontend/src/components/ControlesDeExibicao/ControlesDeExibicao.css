@@ -1,0 +1,190 @@
+.controles-exibicao {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.controles-exibicao h3, .controles-exibicao h4 {
+  margin: 0;
+  border-bottom: 2px solid var(--gray-200, #e2e8f0);
+  padding-bottom: 0.75rem;
+  color: var(--gray-800, #1e293b);
+  font-weight: 600;
+  font-size: 1.125rem;
+}
+
+.controles-exibicao h3 {
+  color: var(--primary-600, #2563eb);
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.config-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding: 1rem;
+  background: var(--gray-50, #f8fafc);
+  border-radius: 12px;
+  border: 1px solid var(--gray-200, #e2e8f0);
+}
+
+.config-section label {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.875rem;
+  color: var(--gray-700, #334155);
+  font-weight: 500;
+  padding: 8px 0;
+}
+
+.config-section label span:first-child {
+  text-align: left;
+  line-height: 1.4;
+}
+
+.config-section input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 6px;
+  background: var(--gray-300, #cbd5e1);
+  border-radius: 3px;
+  outline: none;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.config-section input[type="range"]:hover {
+  background: var(--gray-400, #94a3b8);
+}
+
+.config-section input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(135deg, var(--primary-500, #3b82f6), var(--primary-600, #2563eb));
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease;
+}
+
+.config-section input[type="range"]::-webkit-slider-thumb:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(59, 130, 246, 0.4);
+}
+
+.config-section input[type="range"]::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(135deg, var(--primary-500, #3b82f6), var(--primary-600, #2563eb));
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.config-section input[type="number"],
+.config-section select {
+  padding: 8px 12px;
+  border: 1px solid var(--gray-300, #cbd5e1);
+  border-radius: 8px;
+  background: white;
+  color: var(--gray-700, #334155);
+  font-size: 0.875rem;
+  font-weight: 500;
+  min-width: 80px;
+  transition: all 0.2s ease;
+}
+
+.config-section input[type="number"]:focus,
+.config-section select:focus {
+  outline: none;
+  border-color: var(--primary-500, #3b82f6);
+  box-shadow: 0 0 0 3px var(--primary-100, #dbeafe);
+}
+
+.config-section input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--primary-500, #3b82f6);
+  cursor: pointer;
+}
+
+.save-button {
+  padding: 12px 20px;
+  border: none;
+  background: linear-gradient(135deg, var(--primary-500, #3b82f6), var(--primary-600, #2563eb));
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-align: center;
+  transition: all 0.2s ease;
+  margin-top: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 4px rgba(59, 130, 246, 0.3);
+}
+
+.save-button:hover {
+  background: linear-gradient(135deg, var(--primary-600, #2563eb), var(--primary-700, #1d4ed8));
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+}
+
+.save-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(59, 130, 246, 0.3);
+}
+
+/* Estilos para inputs de texto e números */
+.config-section input[type="text"] {
+  padding: 8px 12px;
+  border: 1px solid var(--gray-300, #cbd5e1);
+  border-radius: 8px;
+  background: white;
+  color: var(--gray-700, #334155);
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.config-section input[type="text"]:focus {
+  outline: none;
+  border-color: var(--primary-500, #3b82f6);
+  box-shadow: 0 0 0 3px var(--primary-100, #dbeafe);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .controles-exibicao {
+    gap: 1rem;
+  }
+  
+  .config-section {
+    padding: 0.75rem;
+    gap: 1rem;
+  }
+  
+  .config-section label {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    text-align: center;
+  }
+  
+  .config-section label span:first-child {
+    text-align: center;
+  }
+  
+  .save-button {
+    font-size: 0.875rem;
+    padding: 10px 16px;
+  }
+} 
